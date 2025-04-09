@@ -28,10 +28,16 @@ function asics_theme_scripts() {
     // Theme stylesheet
     wp_enqueue_style('asics-style', get_stylesheet_uri());
     
+    // Tailwind CSS
+    wp_enqueue_style('tailwind', 'https://cdn.tailwindcss.com');
+    
     // Google Fonts
     wp_enqueue_style('asics-fonts', 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
     
     // Font Awesome
     wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+    
+    // Custom JS
+    wp_enqueue_script('asics-script', get_template_directory_uri() . '/js/main.js', array(), '1.0', true);
 }
 add_action('wp_enqueue_scripts', 'asics_theme_scripts');
