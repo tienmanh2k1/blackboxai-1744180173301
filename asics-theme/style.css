@@ -40,8 +40,46 @@ body {
     color: var(--asics-red);
 }
 
-@media (max-width: 768px) {
+/* Mobile styles */
+@media (max-width: 767px) {
+    .main-navigation {
+        display: none;
+    }
+    
     .mobile-menu {
         display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        z-index: 50;
+        padding: 1rem;
+    }
+    
+    .mobile-menu.active {
+        display: block;
+    }
+    
+    .product-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+
+/* Tablet styles */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
     }
 }
