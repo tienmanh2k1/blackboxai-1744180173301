@@ -1,0 +1,47 @@
+/*
+Theme Name: ASICS Vietnam
+Theme URI: https://www.asics.com/vn/vi-vn/
+Author: Your Name
+Author URI: https://example.com
+Description: WordPress theme replica of ASICS Vietnam website
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: asics
+Tags: e-commerce, responsive, asics
+*/
+
+/* Custom styles for ASICS theme */
+:root {
+    --asics-blue: #005baa;
+    --asics-red: #ed1c24;
+    --asics-gray: #f5f5f5;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.hero {
+    background-color: var(--asics-blue);
+    background-image: linear-gradient(to right, var(--asics-blue), var(--asics-red));
+}
+
+.product-card {
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.footer-links a:hover {
+    color: var(--asics-red);
+}
+
+@media (max-width: 768px) {
+    .mobile-menu {
+        display: none;
+    }
+}
